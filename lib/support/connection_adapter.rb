@@ -8,8 +8,8 @@ class ConnectionAdapter
 
   def connect!
     ActiveRecord::Base.establish_connection(
-      :adapter => self.adapter,
-      :database => self.database
+      :adapter => "sqlite3",
+      :database => "db/students/sqlite"
     )
   end
 end
